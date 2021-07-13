@@ -1,0 +1,14 @@
+{
+    "6000":{
+        "title":"Low",
+        "description":"6000 miles/ 644646km"
+    },
+    "9000": {
+        "title":"Average",
+        "description":"9000 miles"
+    },
+    "12000":{
+        "title":"High",
+        "description":"12000 miles"
+    }
+}

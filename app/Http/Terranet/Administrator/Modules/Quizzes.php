@@ -66,7 +66,7 @@ class Quizzes extends Scaffolding implements Navigable, Filtrable, Editable, Val
     {
         return $this->scaffoldForm()
             ->update('label_question', function ($element) {
-                $title = 'Label: {"Low":6000,"High":12000}';
+                $title = 'Label: <a href="'. asset('admin/doc/example.txt') .'" download>Example data format</a>' ;
                 $element->setTitle($title);
                 return $element;
             })
