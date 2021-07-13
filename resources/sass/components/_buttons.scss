@@ -1,0 +1,92 @@
+.btn {
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  color: $body-color;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: $btn-border-width solid transparent;
+  box-shadow: $btn-focus-box-shadow;
+  overflow: hidden;
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+
+  @include media-breakpoint-down(md) {
+    padding: 1.2rem 2.25rem;
+  }
+
+  @include hover-focus {
+    color: $body-color;
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+  }
+
+  &.disabled,
+  &:disabled {
+    opacity: $btn-disabled-opacity;
+    @include box-shadow(none);
+  }
+
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+}
+
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+.btn-primary {
+  color: $white;
+  //background: linear-gradient(45deg, #16a398 0%,#52d5ab 100%);
+  background: linear-gradient(40deg, rgb(22,163,152) 0%, rgb(82,213,171) 100%);
+  z-index: 1;
+  position: relative;
+
+  span {
+    position: relative;
+    z-index: 3;
+    color: $white;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.3em;
+    background: linear-gradient(40deg, rgb(22,163,152) 100%, rgb(82,213,171) 100%);
+    transition: opacity 0.5s ease-in;
+    z-index: 2;
+    opacity: 0;
+  }
+
+  @include hover {
+    //background: linear-gradient(40deg, rgb(22,163,152) 60%, rgb(82,213,171) 100%);
+
+    &::after {
+      opacity: 0.6;
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $white;
+  }
+}
+
+.btn-lg {
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+}
+
+.f-disabled {
+    opacity: $btn-disabled-opacity;
+    @include box-shadow(none);
+}

@@ -1,0 +1,94 @@
+@page {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("/img/pdf/ellipse2x.png");
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 142px 339px;
+  line-height: 1.5;
+}
+
+.wrapper {
+  margin: 0;
+  text-align: center;
+  padding-top: 95px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+}
+.section .title {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  position: relative;
+  white-space: nowrap;
+  z-index: 5;
+  font-family: "IBM Plex Serif", Times, "Times New Roman", Georgia, serif;
+}
+.section .name {
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 500;
+  color: #000;
+  white-space: nowrap;
+  margin: 0;
+  padding: 37px 0 0 0;
+}
+.section .gift-by {
+  font-size: 14px;
+  color: #000;
+  font-family: "IBM Plex Serif", Times, "Times New Roman", Georgia, serif;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.content {
+  font-size: 24px;
+  line-height: 44px;
+  display: flex;
+  height: 402px;
+  vertical-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.content p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.footer {
+  padding-top: 126px;
+}
+
+.logo {
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+  font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 500;
+}
+.logo img {
+  margin: 0 auto 40px;
+  display: block;
+}

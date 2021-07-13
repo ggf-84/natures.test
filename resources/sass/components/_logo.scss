@@ -1,0 +1,35 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+
+  &-symbol {
+    display: block;
+    width: 28px;
+    height: 28px;
+  }
+
+  &-title {
+    display: none;
+    color: $body-color;
+    font-family: $headings-font-family;
+    font-weight: $font-weight-medium;
+  }
+
+  &-link {
+    @include hover-focus {
+      text-decoration: none;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &-symbol {
+      width: 42px;
+      height: 42px;
+      margin-right: 1.375rem;
+    }
+
+    &-title {
+      display: inline-block;
+    }
+  }
+}

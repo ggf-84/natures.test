@@ -1,0 +1,56 @@
+.n-leap {
+  align-items: center;
+  display: none;
+  font-size: $font-size-xs;
+  text-transform: capitalize;
+  letter-spacing: .3em;
+  line-height: 1;
+  transform: rotate(-90deg) translateX(100%) translateY(100%);
+  z-index: 100;
+  position: absolute;
+  right: 30px;
+  bottom: 0;
+
+  &-icon {
+    font-size: 1.3rem;
+    padding-left: 1rem;
+    transform: rotate(180deg);
+    order: 1;
+  }
+
+  &-label {
+    order: 2;
+  }
+
+  &--up {
+    position: fixed;
+    right: 20px;
+
+    .n-leap-label {
+      order: 1;
+    }
+
+    .n-leap-icon {
+      order: 2;
+      transform: rotate(0deg);
+    }
+  }
+
+  &[data-state] {
+    transition: opacity .3s ease-in;
+  }
+
+  &[data-state="in"] {
+    opacity: 1;
+    z-index: 100;
+  }
+
+  &[data-state="out"] {
+    opacity: 0;
+    z-index: -1;
+  }
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+  }
+}

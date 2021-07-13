@@ -1,0 +1,99 @@
+.n-hero {
+  position: relative;
+  padding: 100px 0 130px;
+  margin-bottom: 240px;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    //max-width: 100%;
+
+    &::before {
+      content: "";
+      flex: 1;
+      order: 2;
+    }
+  }
+
+  .display-wow {
+    text-align: center;
+    order: 1;
+  }
+
+  .btn {
+    order: 3;
+    margin-bottom: 2rem;
+  }
+
+  #share-scroll {
+    position: absolute;
+    left: 30px;
+    bottom: 100px;
+    cursor: pointer;
+
+    &::before{
+      background: black;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      z-index: -1;
+    }
+
+    @include media-breakpoint-down(sm){
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down(md){
+    &-content {
+      max-width: 100%;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 0;
+    margin-top: -$header-height;
+    height: 100vh;
+
+    &-spacer {
+      display: none;
+    }
+
+    &-content {
+      top: 50%;
+      left: 50%;
+      bottom: auto;
+      transform: translate(-50%, -50%);
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      &::before {
+        content: initial;
+      }
+    }
+
+    .n-scene--intro {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: percentage(7.5 / 12);
+      transform: translateY(-50%);
+    }
+
+    .display-wow {
+      text-align: left;
+      margin-bottom: 3rem;
+    }
+
+    .btn {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="399px" height="440px" viewBox="0 0 399 440" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Background_blue</title>
+    <g id="Prototype" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.5">
+        <g id="CO2_Calculator_Results-Page" transform="translate(0.000000, -2654.000000)" fill="#B7EDED">
+            <g id="background" transform="translate(-241.000000, -1040.000000)">
+                <path d="M241,3694.96654 C258.124526,3691.7349 283.204327,3696.60705 316.239403,3709.58298 C365.792017,3729.04687 382.243617,3744.37832 457.980305,3776.68778 C533.716992,3808.99725 581.569712,3818.03279 605.491098,3832.97848 C629.412483,3847.92416 640,3867.19835 640,3896.32519 C640,3925.45203 633.816059,3946.24945 562.42244,4028.47561 C533.677764,4061.58171 490.564777,4096.76341 433.083478,4134.02071 C393.943486,4134.02071 329.91566,4133.89443 241,4133.64188 L241,3694.96654 Z" id="Background_blue"></path>
+            </g>
+        </g>
+    </g>
+</svg>

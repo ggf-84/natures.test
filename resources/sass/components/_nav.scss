@@ -1,0 +1,51 @@
+.nav {
+  display: flex;
+
+  &--fill {
+    flex: 1 1 auto;
+  }
+
+  &--horizontal {
+    .nav-link {
+      margin-left: 1.625rem;
+      margin-right: 1.625rem;
+    }
+  }
+}
+
+.nav-link {
+  position: relative;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-sm;
+  line-height: 1;
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  @include hover-focus-active {
+    &::before {
+      background: linear-gradient(to right, rgba(#b7eded, .5) 0%, rgba(#a4edbb, .5) 100%);
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -.3em;
+      right: 0;
+      height: 0.375rem;
+      z-index: -1;
+    }
+  }
+
+  &-lg {
+    font-size: $h5-font-size;
+  }
+}
+
+.nav-title {
+  @include media-breakpoint-up(lg) {
+    color: lighten($black, 50);
+    font-size: $font-size-xs;
+    margin-bottom: map-get($spacers, 5);
+    text-transform: uppercase;
+  }
+}

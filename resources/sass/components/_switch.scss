@@ -1,0 +1,118 @@
+.switch {
+  height: 24px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  margin: 12px auto;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch span {
+  align-items: center;
+  display: flex;
+  min-height: 24px;
+  line-height: 24px;
+  color: #789589;
+  transition: color .3s ease;
+}
+
+.switch-input,
+.switch-input::after {
+  display: block;
+  border-radius: 12px;
+}
+
+.switch-input {
+  background: linear-gradient(45deg, #b7eded 0%, #a4edbb 100%);
+  width: 42px;
+  height: 24px;
+  position: relative;
+  margin: 0 12px;
+}
+
+.switch-input::after {
+  background: #fff;
+  content: '';
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  box-shadow: 0 1px 3px rgba(18, 22, 33, .1);
+  transition: all .45s ease;
+}
+
+.switch-label {
+  font-weight: normal;
+  position: relative;
+  display: block;
+  //white-space: nowrap;
+}
+
+.switch-label::before,
+.switch-label::after {
+  content: attr(data-title);
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  -webkit-backface-visibility: hidden;
+}
+
+.switch-label::before {
+  transition: all .3s ease .2s;
+}
+
+.switch-label::after {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: $body-color;
+  transition: all .3s ease;
+  transform: translate(2px, 0);
+}
+
+.switch input:checked + span .switch-input::after {
+  background: #fff;
+  transform: translate(18px, 0);
+}
+
+.switch input:not(:checked) + span .switch-off::before,
+.switch input:checked + span .switch-on::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease;
+}
+
+.switch input:not(:checked) + span .switch-off::before {
+  transform: translate(2px, 0);
+}
+
+.switch input:checked + span .switch-on::before {
+  transform: translate(-2px, 0);
+}
+
+.switch input:not(:checked) + span .switch-off::after,
+.switch input:checked + span .switch-on::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+  transition: all .3s ease .2s;
+}
+
+.switch--single .switch-input {
+  background: #e4ecfa;
+  margin-left: 0;
+}
+
+.switch--single .switch-label:first-child {
+  display: none;
+}
+
+.switch--single input:checked + span .switch-input {
+  background: linear-gradient(45deg, #b7eded 0%, #a4edbb 100%);
+}

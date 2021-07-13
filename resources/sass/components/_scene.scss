@@ -1,0 +1,204 @@
+$scenes-lg: (
+  // intro: 64vw,
+  reason: 66vw,
+  ride: 44vw,
+  dance: 46vw,
+  share: 45vw,
+  bike: 27vw,
+  heart: 33.5vw,
+);
+
+.n-scene {
+  margin: 0;
+  position: relative;
+  user-select: none;
+  overflow: hidden;
+
+  &-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-picture {
+    user-select: none;
+  }
+
+  &-image {
+    width: 100%;
+  }
+
+  &-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    @each $name, $size in $scenes-lg {
+      &--#{$name} {
+        .n-scene-image {
+          width: $size;
+        }
+      }
+    }
+  }
+
+  &--bubbles {
+    margin: 0 auto;
+  }
+}
+
+@keyframes bubble {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+     opacity: 0;
+  }
+  20% {
+   opacity: 1; 
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(5px, -40px, 0) rotate(360deg); 
+  }
+}
+
+@keyframes bubble-alt {
+  0% {
+    // transform: translate3d(0, 0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-5px, -40px, 0) rotate(-360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes cloud {
+  0% {
+    transform: translate3d(-2%, 0, 0) rotate(-2deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(2%, -2%, 0) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+@keyframes cloud2 {
+  0% {
+    transform: translate3d(5%, -32px, 0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-10%, 7%, 0) rotate(-10deg);
+    opacity: 0;
+  }
+}
+
+
+// .n-scene--intro {
+//   width: 100%;
+//   height: 100%;
+//   max-width: 64vw;
+
+//   .n-scene-image {
+//     max-width: 100%;
+//     position: absolute;
+//     left: 0;
+//     top: 50%;
+//     transform: translateY(-50%);
+//   }
+
+//   .clouds {
+//     image {
+//       opacity: 0;
+
+//       &:nth-child(1),
+//       &:nth-child(3) {
+//         animation: cloud 20s linear infinite alternate;
+//       }
+
+//       &:nth-child(2),
+//       &:nth-child(4) {
+//         animation: cloud2 20s 2s linear infinite alternate;
+//       }
+//     }
+//   }
+
+//   .grass {
+//     transform: translate(24%, 84%);
+
+//     image {
+//       animation: float 6s ease-in-out infinite;
+
+//       &:nth-child(even) {
+//         animation-name: float;
+//       }
+
+//       &:nth-child(odd) {
+//         animation-name: float-alt;
+//       }
+//     }
+//   }
+// }
+
+
+.n-scene--intro {
+  $width: 868;
+  $height: 740;
+  @include aspect-ratio($width, $height);
+}
+
+.n-scene--reason {
+  $width: 968;
+  $height: 704;
+  margin: 0 auto;
+  max-width: #{$width}px;
+  @include aspect-ratio($width, $height);
+}
+
+.n-scene--plant {
+  $width: 624;
+  $height: 696;
+  
+  max-width: #{$width}px;
+  @include aspect-ratio($width, $height);
+}
+
+.n-scene--ride {
+  $width: 694;
+  $height: 578;
+  
+  max-width: #{$width}px;
+  @include aspect-ratio($width, $height);
+}
+
+.n-scene--planted {
+  $width: 746;
+  $height: 605;
+  
+  max-width: #{$width}px;
+  @include aspect-ratio($width, $height);
+}
+
+.n-scene--share {
+  $width: 642;
+  $height: 520;
+  
+  max-width: #{$width}px;
+  @include aspect-ratio($width, $height);
+}

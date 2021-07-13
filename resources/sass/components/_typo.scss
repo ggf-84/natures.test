@@ -1,0 +1,35 @@
+.display-wow {
+  font-size: $h4-font-size;
+  //font-weight: $font-weight-normal;
+  font-weight: $font-weight-medium;
+  line-height: 2.125rem;
+
+  @include media-breakpoint-up(lg) {
+    font-size: $display2-size;
+    line-height: 1;
+  }
+}
+
+.display-4 {
+  font-size: $h4-font-size;
+  font-weight: $font-weight-medium;
+  line-height: 1.4;
+  margin-bottom: 0;
+
+  @include media-breakpoint-up(lg) {
+    font-size: $h1-font-size;
+    line-height: 1.25;
+  }
+}
+
+.n-lead {
+  color: #789589;
+  font-family: $headings-font-family;
+  line-height: 2.125;
+}
+
+.n-copyright {
+  color: lighten($black, 50);
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+}

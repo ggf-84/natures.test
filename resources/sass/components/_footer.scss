@@ -1,0 +1,139 @@
+.n-footer {
+  $footer-spacing-y: $font-size-base * 6.25;
+  padding-bottom: $footer-spacing-y;
+  padding-top: $footer-spacing-y;
+  position: relative;
+  overflow: hidden;
+
+  h6 {
+    color: #807f7f;
+    font-size: 0.625rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+  }
+  .nav-link {
+    margin-bottom: $font-size-base * 1.375;
+  }
+
+  .img-abs-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .payment-card-item {
+    margin-right: 1rem;
+  }
+
+
+  .img-abs-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+
+    svg {
+
+      .cls-1 {
+        fill: #b7eded;
+      }
+    }
+  }
+
+  .credits-action {
+    .n-hero-discover-icon {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: block;
+
+    .nav-link {
+      margin-bottom: $font-size-base * 1.375;
+    }
+  }
+
+  @include media-breakpoint-down(md){
+    .top-footer {
+      justify-content: space-between;
+      margin-bottom: 0 !important;
+
+      .nav-link {
+        font-size: 0.7rem;
+        font-weight: 400;
+
+        &::before {
+          background: none;
+        }
+      }
+    }
+
+    .img-abs-right {
+      width: 50%;
+    }
+
+    .credits-action {
+      text-align: center;
+      margin-top: 3rem;
+
+      a {
+        color: #807f7f;
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+    }
+
+    .copyright-col, .payment-card-items {
+      display: flex;
+      justify-content: center !important;
+    }
+    .payment-card-items {
+      order: 2;
+      padding: 2rem 0 2rem 0;
+
+      .payment-card-item {
+        margin: 0 10px;
+      }
+    }
+    .copyright-col {
+      order: 3;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .credits-action {
+      border-bottom: 1px solid #ced4da;
+      padding: 1.2rem 0;
+      line-height: 1;
+      margin: 0 15px;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .n-hero-discover-icon {
+        display: block;
+      }
+
+      a {
+        font-size: 0.625rem;
+        margin-bottom: 0;
+        color: black !important;
+      }
+    }
+
+    .sub-menu {
+      &:last-of-type {
+        .nav {
+          border-bottom: 1px solid #ced4da;
+        }
+      }
+    }
+
+    .payment-card-items {
+      padding: 5rem 0 2rem 0;
+    }
+  }
+}
